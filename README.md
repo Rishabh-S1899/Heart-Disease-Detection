@@ -23,18 +23,6 @@ Key features:
 - `inference.py` - helpers to load artefacts and run single-example predictions.
 - `main.py` - minimal end-to-end script: preprocess -> resample -> train -> evaluate -> save artefacts -> save PCA plots.
 
-## Note about images from the notebook
-
-The original notebook generated several PCA scatter plots and confusion matrix figures. The notebook file in this repository does not contain embedded image outputs. To reproduce those images locally and include them in documentation, run the `main.py` script which will create two image files:
-
-- `pca_2d.png`
-- `pca_3d.png`
-
-You can then embed those images into this README (or publish them alongside the repo). If you already have PNGs exported from the notebook, place them in the repo root and reference them using standard Markdown image syntax:
-
-![2D PCA](pca_2d.png)
-
-
 ## Quickstart (Windows PowerShell)
 
 1. Create a virtual environment and install dependencies:
@@ -79,14 +67,4 @@ See `requirements.txt` for a pinned list. Install with `pip install -r requireme
 - Add unit tests to verify preprocessing invariants (column names, missing values handling).
 - Add a small script to export notebook images into `docs/` and auto-embed them into the README using a simple script.
 - Consider Dockerizing the environment for reproducible runs.
-
-## License
-
-Add your license here (e.g., MIT).
-
----
-
-If you'd like, I can:
-- Run the pipeline here to generate the two PCA images (I can't do that unless you provide the dataset in the repo or update `config.DATA_PATH` to a local path accessible in this workspace).
-- Embed the generated images into the README after you add them, or provide a PR-ready README that already references images you upload.
 
