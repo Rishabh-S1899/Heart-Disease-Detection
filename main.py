@@ -28,7 +28,8 @@ def main():
     model_utils.evaluate_model(model, X_test, y_test)
 
     # Save model, scaler, and columns for inference
-    model_utils.save_artefacts(model=model, scaler=scaler, columns=X_res.columns)
+    # Convert columns to a plain list for saving
+    model_utils.save_artefacts(model=model, scaler=scaler, columns=list(X_res.columns))
     print(f"Model, scaler, and column list saved.")
 
     # Generate and save plots
